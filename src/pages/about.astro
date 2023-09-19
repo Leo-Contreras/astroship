@@ -14,19 +14,15 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
 <Layout title="About">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="title">Nosotros</Fragment>
+      <Fragment slot="desc">Soluciones Integrales de Diseño y Desarrollo Web</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
+     Conoce al equipo detras de Web Nexus</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
+        Nuestro equipo Multidisciplinario se compone por Ingenieros Informáticos, Mercadólogos, Diseñadores Gráficos, Administrativos, Consultores, Fotógrafos, Publicistas, Especialistas SEO, y Redactores.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
@@ -42,7 +38,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 background="#ffffff"
                 fit="cover"
                 position="center"
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
+                class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
               />
             </div>
 
@@ -58,5 +54,52 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         ))
       }
     </div>
+    <div class="custom-container flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <!-- Nueva sección para Misión, Visión, Filosofía y Valores -->
+      <h2 class="font-bold text-3xl text-gray-800">Misión</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Ofrecer soluciones digitales de alta calidad que impulsen el crecimiento de nuestros clientes, manteniendo la innovación y excelencia en cada proyecto.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">Visión</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Ser líderes en el mercado de desarrollo web y tecnología digital, reconocidos por nuestra creatividad, eficiencia y compromiso con el cliente.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">Filosofía</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Creemos en la mejora continua y en el potencial de nuestro equipo para alcanzar estándares cada vez más altos de calidad y servicio al cliente.
+      </p>
+
+      <h2 class="font-bold text-3xl text-gray-800">Valores</h2>
+      <ul class="text-lg leading-relaxed text-slate-500 list-disc ml-6">
+        <li>Innovación</li>
+        <li>Colaboración</li>
+        <li>Integridad</li>
+        <li>Excelencia</li>
+        <li>Compromiso</li>
+        <li>Agilidad</li>
+        <li>Respeto</li>
+        <li>Pasión</li>
+      </ul>
+    </div>
   </Container>
 </Layout>
+
+
+<style>
+  .custom-container {
+    background-color: #f3f4f6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .custom-container h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .custom-container p,
+  .custom-container ul {
+    margin-bottom: 15px;
+  }
+</style>

@@ -6,6 +6,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  
   site: "https://astroship.web3templates.com",
   integrations: [
     tailwind(),
@@ -15,4 +16,7 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
+  experimental: {
+    viewTransitions: true
+}
 });

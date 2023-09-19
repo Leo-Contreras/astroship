@@ -1,12 +1,67 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/heroshots.png";
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import checkmarkImage from "assets/checkmark.png";
+import logoBanner from "assets/logo-banner.png";
+
+let logoBannerSrc = String(logoBanner.src);
+let checkmarkSrc = String(checkmarkImage.src);
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+<style>
+    .bg-005A8D {
+    background-color: #000000;
+  }
+
+  .bg-6E7C8A {
+    background-color: #6E7C8A;
+  }
+
+  .text-golden-green {
+        color: #f6cf0b; /* Ejemplo de un tono dorado-verde */
+    }
+    .text-strike-through {
+        text-decoration: line-through;
+        opacity: 0.6;
+        font-size: 0.8em; /* Tamaño más pequeño */
+    }
+      .checkmark-list {
+      list-style-type: none; /* Eliminar bullets de la lista */
+    }
+
+    .checkmark-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em; /* Aumentar el tamaño del texto */
+    margin-bottom: 1em; /* Espacio entre elementos */
+  }
+  .checkmark {
+    margin-right: 0.5em; /* Espacio entre la imagen y el texto */
+    width: 24px; /* Anchura de la imagen */
+    height: 24px; /* Altura de la imagen */
+  }
+  .text-golden-checkmark {
+    color: #DAA520; /* Color dorado */
+  }
+    .carousel {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 100px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+</style>
+
+<div class="bg-005A8D w-full m-0 p-0 flex justify-center">
+  <div class="container mx-auto p-4 flex flex-col items-center text-white">
+    <main class="grid lg:grid-cols-2 place-items-center pt-16 pb-2 md:pt-12 md:pb-6 w-full">
+    
+  
   <div class="py-6 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
@@ -18,16 +73,29 @@ import { Icon } from "astro-icon";
       format="avif"
     />
   </div>
+  
   <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Obten la pagina perfecta para tu negocio !
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Web Nexus es tu socio ideal en la creación de soluciones web personalizadas para tu negocio. Construido con tecnologías de vanguardia, podemos llevar tu presencia en línea al siguiente nivel.
+
+    <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter text-005A8D">
+      Tu sitio web desde solo <br> <span class="text-golden-green">$159 Dlls</span> <span class="text-strike-through">$299</span>
+     </h1>
     
+    
+    <!-- El párrafo en gris para ser neutro y complementar el título -->
+    <p class="text-lg mt-4 max-w-xl text-6E7C8A">
+      Web Nexus es tu socio ideal en la creación de soluciones web personalizadas para tu negocio. Construido con tecnologías de vanguardia, podemos llevar tu presencia en línea al siguiente nivel.
     </p>
+    <br/>
+
+    <ul class="checkmark-list">
+      <li><img src={checkmarkSrc} alt="Checkmark" class="checkmark text-golden-checkmark"/> Lleva el mundo a tu sitio web</li>
+      <li><img src={checkmarkSrc} alt="Checkmark" class="checkmark text-golden-checkmark"/> Sitios web responsivos y centrados en el usuario</li>
+      <li><img src={checkmarkSrc} alt="Checkmark" class="checkmark text-golden-checkmark"/> Alcanza y expande tu audiencia</li>
+      <li><img src={checkmarkSrc} alt="Checkmark" class="checkmark text-golden-checkmark"/> Te tenemos cubierto</li>
+    </ul>
+
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <!-- Los enlaces en verde claro para evocar innovación y acción -->
       <Link
         href="#"
         href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
@@ -35,7 +103,7 @@ import { Icon } from "astro-icon";
         class="flex gap-1 items-center justify-center"
         rel="noopener">
         
-         Llevemos tu sueño a lo Digital !
+        Llevemos tu sueño a lo Digital !
       </Link>
       <Link
         size="lg"
@@ -50,3 +118,8 @@ import { Icon } from "astro-icon";
     </div>
   </div>
 </main>
+<div class="logo-banner-container w-full flex justify-center pb-5">
+  <img src={logoBannerSrc} alt="logo-banner-frontend" class=""/>
+</div>
+</div>
+

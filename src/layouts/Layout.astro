@@ -3,6 +3,7 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
+import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -43,15 +44,16 @@ const makeTitle = title
       openGraph={{
         basic: {
           url: canonicalURL,
-          type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          type: "paginas web",
+          title: `Web Nexus - Inicio`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Web Nexus Homepage ",
         },
       }}
     />
+    <ViewTransitions />
   </head>
   <body>
     <Navbar />
