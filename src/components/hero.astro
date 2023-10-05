@@ -1,17 +1,19 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/heroshots.png";
+import heroImage from "assets/banner-foto.svg";
 import Link from "@components/ui/link.astro";
 import checkmarkImage from "assets/checkmark.png";
 import logoBanner from "assets/logo-banner.png";
+import Modal from "@components/Modal.astro";
 
 let logoBannerSrc = String(logoBanner.src);
 let checkmarkSrc = String(checkmarkImage.src);
+
 ---
 
 <style>
     .bg-005A8D {
-    background-color: #000000;
+    background-color: #0149ad;
   }
 
   .bg-6E7C8A {
@@ -67,8 +69,8 @@ let checkmarkSrc = String(checkmarkImage.src);
       src={heroImage}
       alt="Web Nexus - Creación de páginas web"
       widths={[200, 400, 600]}
-      aspectRatio="4:3"
-      sizes="(max-width: 800px) 100vw, 620px"
+      aspectRatio="16:9"
+      sizes="(max-width: 1200px) 100vw, 620px"
       loading="eager"
       format="avif"
     />
@@ -96,20 +98,13 @@ let checkmarkSrc = String(checkmarkImage.src);
 
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <!-- Los enlaces en verde claro para evocar innovación y acción -->
-      <Link
-        href="#"
-        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        
-        Llevemos tu sueño a lo Digital !
-      </Link>
+
+
       <Link
         size="lg"
         style="outline"
         rel="noopener"
-        href="https://github.com/surjithctly/astroship"
+        href="/contacto"
         class="flex gap-1 items-center justify-center"
         target="_blank">
         
@@ -120,6 +115,8 @@ let checkmarkSrc = String(checkmarkImage.src);
 </main>
 <div class="logo-banner-container w-full flex justify-center pb-5">
   <img src={logoBannerSrc} alt="logo-banner-frontend" class=""/>
+
 </div>
 </div>
+
 

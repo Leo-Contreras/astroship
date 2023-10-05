@@ -6,15 +6,86 @@ import Hero from "@components/hero.astro";
 import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
 import Proceso from "@components/proceso.astro";
+
+import ImageGallery from "@components/ImageGallery.astro";
+import TablaContenidos from "../components/TablaContenidos.astro";
+
 ---
 
 <Layout title="">
- 
     <Hero />
     <Container>
-    <Features />
-    <Proceso />
-    <Logos />
-    <Cta />
-  </Container>
+        <div class="content-container">
+            <div class="main-content">
+                <!-- Título -->
+                <h1 class="text-4xl font-bold mb-6">Título Principal</h1>
+
+                <!-- Header -->
+                <header class=" p-4 mb-6">
+                    <h2 class="text-2xl font-semibold">Encabezado</h2>
+                </header>
+
+                <!-- Contenedores en un grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        Contenedor 1
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        Contenedor 2
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        Contenedor 3
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        Contenedor 4
+                    </div>
+                </div>
+
+            </div>
+            <div class="sticky-container">  {/* Contenedor para TablaContenidos */}
+
+                <TablaContenidos />
+
+            </div>
+        </div>
+    </Container>
 </Layout>
+
+
+
+
+<style>
+    /* Añade estos estilos en tu archivo CSS o dentro de una etiqueta <style> en tu componente */
+    /* Añade estos estilos en tu archivo CSS o dentro de una etiqueta <style> en tu componente */
+    .content-container {
+        display: grid;
+        grid-template-columns: 85% 15%;
+        gap: 1rem;
+    }
+
+    .main-content {
+        /* No se necesitan estilos especiales aquí */
+    }
+
+    .sticky-container {
+
+    }
+
+    /* Añade estos estilos en tu archivo CSS o dentro de una etiqueta <style> en tu componente */
+    .tabla-contenido-container {
+        position: sticky;
+        top: 0;
+        height: 100vh;  /* Asegura que el contenedor tenga una altura definida */
+        overflow-y: auto;  /* Habilita el desplazamiento si el contenido es más largo que la ventana */
+        padding-top: 20px;  /* Añade padding en la parte superior */
+        padding-left: 20px;  /* Añade padding a la izquierda */
+    }
+
+
+    .tabla-contenido {
+        /* No se necesitan estilos especiales aquí */
+    }
+
+
+</style>
+

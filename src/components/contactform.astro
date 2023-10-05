@@ -41,6 +41,22 @@ import Button from "./ui/button.astro";
       Please provide a valid email address.
     </div>
   </div>
+   <!-- Nuevos campos -->
+   <div class="mb-5">
+    <label class="block text-md font-semibold mb-2" for="webType">Tipo de página web</label>
+    <input type="checkbox" id="blog" name="webType" value="Blog"> Blog
+    <input type="checkbox" id="store" name="webType" value="Tienda en línea"> Tienda en línea
+    <input type="checkbox" id="portfolio" name="webType" value="Portafolio"> Portafolio
+  </div>
+  
+  <div class="mb-5">
+    <label class="block text-md font-semibold mb-2" for="budget">Presupuesto estimado</label>
+    <select id="budget" name="budget">
+      <option value="menos-500">$500 o menos</option>
+      <option value="500-1000">$500 - $1000</option>
+      <option value="mas-1000">Más de $1000</option>
+    </select>
+  </div>
   <div class="mb-3">
     <textarea
       name="message"
