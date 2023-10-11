@@ -57,7 +57,7 @@ const makeTitle = title
    
   </head>
   <body>
-    <Navbar />
+    <Navbar class="sticky-navbar" />
     <slot />
     <Footer />
     <style is:global>
@@ -66,6 +66,16 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
+
+     
+      .sticky-navbar {
+          position: sticky;
+          top: 0;
+          z-index: 1000;  /* Asegúrate de que el navbar se mantenga en la parte superior de otros elementos */
+      }
+
+
+
     </style>
   </body>
 </html>

@@ -4,6 +4,14 @@ import Hero from "@components/hero.astro";
 import Layout from "@layouts/Layout.astro";
 import TablaContenidos from "../components/TablaContenidos.astro";
 
+import Carousel from "@components/React/Carousel";
+
+const images = [
+  'https://placekitten.com/301/300',
+  'https://placekitten.com/301/300',
+  'https://placekitten.com/302/300',
+  'https://placekitten.com/303/300'
+];
 ---
 
 <Layout title="Web Nexus Home">
@@ -73,6 +81,8 @@ import TablaContenidos from "../components/TablaContenidos.astro";
                     </div>
                 </div>
 
+                <!--CAROUSEL -->
+                <Carousel images={images} />
 
             </div>
             <div class="sticky-container">  {/* Contenedor para TablaContenidos */}
