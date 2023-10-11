@@ -1,52 +1,84 @@
 ---
 import Container from "@components/container.astro";
-import Cta from "@components/cta.astro";
-import Features from "@components/features.astro";
 import Hero from "@components/hero.astro";
-import Logos from "@components/logos.astro";
 import Layout from "@layouts/Layout.astro";
-import Proceso from "@components/proceso.astro";
-
-import ImageGallery from "@components/ImageGallery.astro";
 import TablaContenidos from "../components/TablaContenidos.astro";
 
 ---
 
-<Layout title="">
+<Layout title="Web Nexus Home">
     <Hero />
     <Container>
         <div class="content-container">
             <div class="main-content">
-                <!-- Título -->
-                <h1 class="text-4xl font-bold mb-6">Título Principal</h1>
+                <h1 class="text-4xl font-bold mb-6">¿Qué tipo de solución necesitas?</h1>
 
                 <!-- Header -->
                 <header class=" p-4 mb-6">
-                    <h2 class="text-2xl font-semibold">Encabezado</h2>
+                    <h2 class="text-2xl font-semibold">Servicios que ofrecemos</h2>
                 </header>
 
                 <!-- Contenedores en un grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="bg-gray-100 p-4 border border-gray-200">
-                        Contenedor 1
+                        <i class="fas fa-utensils"></i>
+                        <h3 class="font-semibold">Página Web para Restaurantes</h3>
+                        <p>Sistema de menú interactivo, reservas y galería de fotos.</p>
                     </div>
                     <div class="bg-gray-100 p-4 border border-gray-200">
-                        Contenedor 2
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3 class="font-semibold">E-commerce Básico</h3>
+                        <p>Para pequeñas tiendas que desean tener presencia en línea.</p>
                     </div>
                     <div class="bg-gray-100 p-4 border border-gray-200">
-                        Contenedor 3
+                        <i class="fas fa-blog"></i>
+                        <h3 class="font-semibold">Blog Personalizado</h3>
+                        <p>Soluciones para individuos o empresas que quieran un blog.</p>
                     </div>
                     <div class="bg-gray-100 p-4 border border-gray-200">
-                        Contenedor 4
+                        <i class="fas fa-rocket"></i>
+                        <h3 class="font-semibold">Páginas de Aterrizaje</h3>
+                        <p>Páginas enfocadas en conversión de visitas a ventas o suscripciones.</p>
                     </div>
                 </div>
 
+                <h1 class="text-4xl font-bold mb-6">Costo Promedio de Diferentes Soluciones Web</h1>
+
+                <!-- Header -->
+                <header class="p-4 mb-6">
+                    <h2 class="text-2xl font-semibold">Encabezado</h2>
+                    <p class="text-lg">
+                        Las soluciones web son muy diferentes en funcionalidad y escala, desde sitios web corporativos simples hasta sistemas empresariales complejos.
+                        Lógicamente, la gama de costos también es amplia. Echa un vistazo a varios ejemplos de nuestras prácticas y no dudes en solicitar una cotización gratuita que se adaptará a tu solución específica.
+                    </p>
+                </header>
+
+                <!-- Contenedores en un grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        <h3 class="font-semibold">Desde $20,000</h3>
+                        <p>Para un sitio web corporativo de marca personalizada.</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        <h3 class="font-semibold">Desde $70,000</h3>
+                        <p>Para un portal web de autoservicio para el cliente.</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        <h3 class="font-semibold">Desde $200,000</h3>
+                        <p>Para una solución de comercio electrónico con interfaz visual y lógica empresarial personalizadas, integradas en una infraestructura de TI corporativa.</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 border border-gray-200">
+                        <h3 class="font-semibold">Desde $400,000</h3>
+                        <p>Para un software web empresarial complejo, por ejemplo, un sistema de EHR personalizado.</p>
+                    </div>
+                </div>
+
+
             </div>
             <div class="sticky-container">  {/* Contenedor para TablaContenidos */}
-
                 <TablaContenidos />
-
             </div>
+
         </div>
     </Container>
 </Layout>

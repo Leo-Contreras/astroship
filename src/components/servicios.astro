@@ -1,0 +1,57 @@
+---
+import hostingIMG from '../assets/hosting.webp'
+import templateIMG from '../assets/template.png'
+import fullstackIMG from '../assets/fullstack.png'
+import Container from './container.astro'
+
+
+const hostingSrc = String(hostingIMG.src)
+const templateSrc = String(templateIMG.src)
+const fullstackSrc = String(fullstackIMG.src)
+
+---
+<div>
+    <Container>
+        <h2 class="text-4xl font-bold text-center">Nuestros Servicios</h2>
+        <div class="flex flex-row justify-between">
+            
+            <!-- Tarjeta de Hosting -->
+            <div class="flex flex-col w-1/4 m-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2.5 transform transition-all duration-200">
+            <img src={hostingSrc} alt="Hosting" class="object-cover h-60 w-full rounded-t-xl">
+            <div class="text-center flex-grow">
+                <h5 class="text-4xl font-bold mt-6">Hosting</h5>
+                <p class="text-lg mt-4">Brindamos un servicio de hosting rápido y confiable para tu sitio web.</p>
+            </div>
+            <button class="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
+                Más información
+            </button>
+            </div>
+            
+             <!-- Tarjeta de Creación de Sitio Web -->
+             <div class="flex flex-col w-1/4 m-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2.5 transform transition-all duration-200">
+                <img src={fullstackSrc} alt="Creación de Sitio Web" class="object-cover h-60 w-full rounded-t-xl">
+                <div class="text-center flex-grow">
+                    <h5 class="text-4xl font-bold mt-6">Creación de Sitio Web</h5>
+                    <p class="text-lg mt-4">Desarrollamos sitios web desde cero, centrados en la experiencia del usuario y el rendimiento.</p>
+                </div>
+                <button class="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
+                    Más información
+                </button>
+                </div>
+
+            <!-- Tarjeta de Implementación de Plantilla -->
+            <div class="flex flex-col w-1/4 m-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-2.5 transform transition-all duration-200">
+            <img src={templateSrc} alt="Implementación de Plantilla" class="object-cover h-60 w-full rounded-t-xl">
+            <div class="text-center flex-grow">
+                <h5 class="text-4xl font-bold mt-6">Implementación de Plantilla</h5>
+                <p class="text-lg mt-4">Personalizamos e implementamos plantillas para adaptarlas a las necesidades de tu negocio.</p>
+            </div>
+            <button class="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">
+                Más información
+            </button>
+            </div>
+        
+        </div>
+        
+    </Container>
+</div>
