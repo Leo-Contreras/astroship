@@ -4,14 +4,7 @@ import Hero from "@components/hero.astro";
 import Layout from "@layouts/Layout.astro";
 import TablaContenidos from "../components/TablaContenidos.astro";
 
-import Carousel from "@components/React/Carousel";
 
-const images = [
-  'https://placekitten.com/301/300',
-  'https://placekitten.com/301/300',
-  'https://placekitten.com/302/300',
-  'https://placekitten.com/303/300'
-];
 ---
 
 <Layout title="Web Nexus Home">
@@ -20,75 +13,50 @@ const images = [
         <div class="content-container">
             <div class="main-content">
                 <h1 class="text-4xl font-bold mb-6">¿Qué tipo de solución necesitas?</h1>
-
+    
                 <!-- Header -->
                 <header class=" p-4 mb-6">
                     <h2 class="text-2xl font-semibold">Servicios que ofrecemos</h2>
                 </header>
-
+    
                 <!-- Contenedores en un grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <i class="fas fa-utensils"></i>
-                        <h3 class="font-semibold">Página Web para Restaurantes</h3>
-                        <p>Sistema de menú interactivo, reservas y galería de fotos.</p>
+                    <!-- Página Web para Restaurantes -->
+                    <div class="bg-gray-100 p-4 border border-gray-200 relative">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de Restaurante" class="w-full mb-4">
+                        <i class="fas fa-utensils absolute top-4 left-4"></i>
+                        <h3 class="font-semibold">Página Web para promocion de negocios</h3>
+                        <p>Sistema de menú interactivo, reservas , galería de fotos , fácil contacto.</p>
                     </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <i class="fas fa-shopping-cart"></i>
+                    <!-- E-commerce Básico -->
+                    <div class="bg-gray-100 p-4 border border-gray-200 relative">
+                        <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de E-commerce" class="w-full mb-4">
+                        <i class="fas fa-shopping-cart absolute top-4 left-4"></i>
                         <h3 class="font-semibold">E-commerce Básico</h3>
                         <p>Para pequeñas tiendas que desean tener presencia en línea.</p>
                     </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <i class="fas fa-blog"></i>
+                    <!-- Blog Personalizado -->
+                    <div class="bg-gray-100 p-4 border border-gray-200 relative">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de Blog" class="w-full mb-4">
+                        <i class="fas fa-blog absolute top-4 left-4"></i>
                         <h3 class="font-semibold">Blog Personalizado</h3>
                         <p>Soluciones para individuos o empresas que quieran un blog.</p>
                     </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <i class="fas fa-rocket"></i>
-                        <h3 class="font-semibold">Páginas de Aterrizaje</h3>
+                    <!-- Páginas de Aterrizaje -->
+                    <div class="bg-gray-100 p-4 border border-gray-200 relative">
+                        <img src="https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagen de Landing Page" class="w-full mb-4">
+                        <i class="fas fa-rocket absolute top-4 left-4"></i>
+                        <h3 class="font-semibold">Desarrollo especializado</h3>
                         <p>Páginas enfocadas en conversión de visitas a ventas o suscripciones.</p>
                     </div>
                 </div>
-
-                <h1 class="text-4xl font-bold mb-6">Costo Promedio de Diferentes Soluciones Web</h1>
-
-                <!-- Header -->
-                <header class="p-4 mb-6">
-                    <h2 class="text-2xl font-semibold">Encabezado</h2>
-                    <p class="text-lg">
-                        Las soluciones web son muy diferentes en funcionalidad y escala, desde sitios web corporativos simples hasta sistemas empresariales complejos.
-                        Lógicamente, la gama de costos también es amplia. Echa un vistazo a varios ejemplos de nuestras prácticas y no dudes en solicitar una cotización gratuita que se adaptará a tu solución específica.
-                    </p>
-                </header>
-
-                <!-- Contenedores en un grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <h3 class="font-semibold">Desde $20,000</h3>
-                        <p>Para un sitio web corporativo de marca personalizada.</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <h3 class="font-semibold">Desde $70,000</h3>
-                        <p>Para un portal web de autoservicio para el cliente.</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <h3 class="font-semibold">Desde $200,000</h3>
-                        <p>Para una solución de comercio electrónico con interfaz visual y lógica empresarial personalizadas, integradas en una infraestructura de TI corporativa.</p>
-                    </div>
-                    <div class="bg-gray-100 p-4 border border-gray-200">
-                        <h3 class="font-semibold">Desde $400,000</h3>
-                        <p>Para un software web empresarial complejo, por ejemplo, un sistema de EHR personalizado.</p>
-                    </div>
-                </div>
-
-                <!--CAROUSEL -->
-                <Carousel images={images} />
-
+    
+                <!-- ... Resto del código ... -->
+    
             </div>
             <div class="sticky-container">  {/* Contenedor para TablaContenidos */}
                 <TablaContenidos />
             </div>
-
         </div>
     </Container>
 </Layout>

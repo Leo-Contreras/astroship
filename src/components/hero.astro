@@ -57,6 +57,11 @@ let checkmarkSrc = String(checkmarkImage.src);
     transition: transform 0.2s ease-in-out;
   }
 
+  .btn-nexus {
+    @apply bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-4 px-8 rounded-lg;
+    @apply transition duration-300 ease-in-out transform hover:scale-105;
+    @apply shadow-xl hover:shadow-2xl;
+}
 </style>
 
 <div class="bg-005A8D w-full m-0 p-0 flex justify-center">
@@ -98,18 +103,9 @@ let checkmarkSrc = String(checkmarkImage.src);
 
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <!-- Los enlaces en verde claro para evocar innovación y acción -->
+     
+      <a href="#" class="btn-nexus">Contacto</a>
 
-
-      <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href="/contacto"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        
-        Contacto
-      </Link>
     </div>
   </div>
 </main>

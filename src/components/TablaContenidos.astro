@@ -1,50 +1,44 @@
 ---
 // TablaContenido.astro
 ---
-<div class="tabla-contenido">
+<div class="tabla-contenido bg-gray-100 p-4 rounded-lg shadow-lg">
 
-  <h1>Tabla de Contenido</h1>
+  <h1 class="font-bold text-2xl mb-4">Tabla de Contenido</h1>
+  
   <nav>
-
-    <ul>
-      <li><a href="#features">Características</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#logos">Logos</a></li>
-      <li><a href="#cta">Llamada a la Acción</a></li>
+    <ul class="space-y-2">
+      <li><a href="#features" class="block py-2 px-4 rounded hover:bg-gray-200 transition">Características</a></li>
+      <li><a href="#proceso" class="block py-2 px-4 rounded hover:bg-gray-200 transition">Proceso</a></li>
+      <li><a href="#logos" class="block py-2 px-4 rounded hover:bg-gray-200 transition">Logos</a></li>
+      <li><a href="#cta" class="block py-2 px-4 rounded hover:bg-gray-200 transition">Llamada a la Acción</a></li>
       <!-- Agrega más ítems según sea necesario -->
     </ul>
   </nav>
 </div>
 
-
 <style>
-    /* Estilos para TablaContenido */
     .tabla-contenido {
         position: sticky;
         top: 0;
         right: 0;
         margin-left: auto;
-        padding: 3rem;
+        padding: 1.5rem;
     }
 
-    /* Estilos para la barra de navegación y sus ítems */
     nav ul {
-        list-style-type: none;  /* Elimina los bullets de la lista */
-        padding: 0;  /* Elimina el padding predeterminado */
-    }
-
-    nav li {
-        font-size: 1.5rem;  /* Aumenta el tamaño de fuente */
-        margin-bottom: 1rem;  /* Añade espacio debajo de cada ítem */
+        list-style-type: none;
+        padding: 0;
     }
 
     nav a {
-        text-decoration: none;  /* Elimina el subrayado de los enlaces */
-        color: black;  /* Color del texto de los enlaces */
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 0.5rem 0;
     }
 
     nav a:hover {
-        text-decoration: underline;  /* Añade un subrayado cuando se pasa el cursor sobre los enlaces */
+        background-color: #f3f4f6;
     }
 </style>
 
